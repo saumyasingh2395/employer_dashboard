@@ -1,0 +1,114 @@
+<form novalidate (ngSubmit)="onSubmit(f)" #f=ngForm>
+  <label>
+    <span>Full name</span>
+    <input
+      type="text"
+      name="name"
+      placeholder="Your full name"
+      ngModel
+      #userName="ngModel"
+      minlength="2"
+      required>
+  </label>
+  <div *ngIf="userName.errors?.required && userName.touched" class="error">
+  Name is Required
+  </div>
+  <br>
+  <div ngModelGroup="account" #userAccount="ngModelGroup">
+    <label>
+      <span>Email address</span>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        ngModel
+        required>
+    </label>
+    <br>
+    <label>
+      <span>Confirm address</span>
+      <input
+        type="email"
+        name="confirm"
+        placeholder="Confirm your email address"
+        ngModel
+        required>
+    </label>
+    <div *ngIf="userAccount.invalid && userAccount.touched" class="error">
+    Invalid Entry
+  </div>
+  </div>
+ 
+  <div ngModelGroup="password" #userPassword="ngModelGroup">
+    <label>
+      <span>Password</span>
+      <input
+        type="password"
+        name="password"
+        placeholder="Give password"
+        ngModel
+        required>
+    </label>
+    <br>
+    <label>
+      <span>Confirm password</span>
+      <input
+        type="password"
+        name="confirm"
+        placeholder="Enter password again"
+        ngModel
+        required>
+    </label>
+    <div *ngIf="userPassword.invalid && userPassword.touched" class="error">
+    Invalid Password
+  </div>
+  </div>
+
+   <label>
+    <span>Phone</span>
+    <input
+      type="number"
+      name="phone"
+      placeholder="Contact Number"
+      ngModel
+      #phone="ngModel"
+      minlength="10"
+      required>
+  </label>
+  <div *ngIf="phone.errors?.required && phone.touched" class="error">
+  Number is required
+  </div>
+
+    <label>
+    <span>Designation</span>
+    <input
+      type="text"
+      name="designation"
+      placeholder="Your Designation"
+      ngModel
+      #designation="ngModel"
+      minlength="2"
+      required>
+  </label>
+  <div *ngIf="designation.errors?.required && designation.touched" class="error">
+  Designation is required !
+  </div>
+  <br>
+    <label>
+    <span>Organisation Name</span>
+    <input
+      type="text"
+      name="organisation"
+      placeholder="Your Organisation"
+      ngModel
+      #organisation="ngModel"
+      minlength="2"
+      required>
+  </label>
+  <div *ngIf="organisation.errors?.required && organisation.touched" class="error">
+  Name a valid organisation!
+  </div>
+  <br>
+  <button type="submit" [disabled]="f.invalid" >Sign up</button>
+</form>
+
