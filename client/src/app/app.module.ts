@@ -5,11 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserService } from './user.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,7 @@ import { SignupComponent } from './signup/signup.component';
     HttpModule,
      AppRoutingModule
   ],
-  providers: [],
+  providers: [ UserService ],
   bootstrap: [AppComponent]
 })
 

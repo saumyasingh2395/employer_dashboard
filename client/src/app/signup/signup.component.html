@@ -1,114 +1,50 @@
-<form novalidate (ngSubmit)="onSubmit(f)" #f=ngForm>
-  <label>
-    <span>Full name</span>
-    <input
-      type="text"
-      name="name"
-      placeholder="Your full name"
-      ngModel
-      #userName="ngModel"
-      minlength="2"
-      required>
-  </label>
-  <div *ngIf="userName.errors?.required && userName.touched" class="error">
-  Name is Required
-  </div>
-  <br>
-  <div ngModelGroup="account" #userAccount="ngModelGroup">
-    <label>
-      <span>Email address</span>
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email address"
-        ngModel
-        required>
-    </label>
-    <br>
-    <label>
-      <span>Confirm address</span>
-      <input
-        type="email"
-        name="confirm"
-        placeholder="Confirm your email address"
-        ngModel
-        required>
-    </label>
-    <div *ngIf="userAccount.invalid && userAccount.touched" class="error">
-    Invalid Entry
-  </div>
-  </div>
- 
-  <div ngModelGroup="password" #userPassword="ngModelGroup">
-    <label>
-      <span>Password</span>
-      <input
-        type="password"
-        name="password"
-        placeholder="Give password"
-        ngModel
-        required>
-    </label>
-    <br>
-    <label>
-      <span>Confirm password</span>
-      <input
-        type="password"
-        name="confirm"
-        placeholder="Enter password again"
-        ngModel
-        required>
-    </label>
-    <div *ngIf="userPassword.invalid && userPassword.touched" class="error">
-    Invalid Password
-  </div>
-  </div>
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" (ngSubmit)="signup()" #f="ngForm" novalidate>
+        <div class="form-group" >
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="user.name" #name="ngModel" required />
+           
+        </div> 
+      
+       <div class="form-group" >
+            <label for="email">email</label>
+            <input type="text" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required />
 
-   <label>
-    <span>Phone</span>
-    <input
-      type="number"
-      name="phone"
-      placeholder="Contact Number"
-      ngModel
-      #phone="ngModel"
-      minlength="10"
-      required>
-  </label>
-  <div *ngIf="phone.errors?.required && phone.touched" class="error">
-  Number is required
-  </div>
+        </div>
+       
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" required />
+            
+        </div>
 
-    <label>
-    <span>Designation</span>
-    <input
-      type="text"
-      name="designation"
-      placeholder="Your Designation"
-      ngModel
-      #designation="ngModel"
-      minlength="2"
-      required>
-  </label>
-  <div *ngIf="designation.errors?.required && designation.touched" class="error">
-  Designation is required !
-  </div>
-  <br>
-    <label>
-    <span>Organisation Name</span>
-    <input
-      type="text"
-      name="organisation"
-      placeholder="Your Organisation"
-      ngModel
-      #organisation="ngModel"
-      minlength="2"
-      required>
-  </label>
-  <div *ngIf="organisation.errors?.required && organisation.touched" class="error">
-  Name a valid organisation!
-  </div>
-  <br>
-  <button type="submit" [disabled]="f.invalid" >Sign up</button>
-</form>
+         <div class="form-group" >
+            <label for="phone">Phone</label>
+            <input type="number" class="form-control" name="phone" [(ngModel)]="user.phone" #phone="ngModel" required />
+            
+        </div>
+         <div class="form-group" >
+            <label for="designation">designation</label>
+            <input type="text" class="form-control" name="designation" [(ngModel)]="user.designation" #designation="ngModel" required />
+            
+        </div>
+         <div class="form-group">
+            <label for="organisation">organisation</label>
+            <input type="text" class="form-control" name="organisation" [(ngModel)]="user.organisation" #organisation="ngModel" required />
+           
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" [disabled]="f.invalid" class="btn btn-primary" (click)="signup()">Register</button>
+            
+        </div>
+        {{user.name}}
+        {{user.email}}
+         {{user.password}}
+          {{user.phone}}
+           {{user.designation}}
+            {{user.organisation}}
 
+    </form>
+</div>
