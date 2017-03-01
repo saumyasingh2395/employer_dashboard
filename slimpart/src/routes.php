@@ -8,10 +8,10 @@
     });
 
   $app->post('/signup', function ($request, $response) {
-        $input = $request->getParsedBody();
+        $data = $request->getParsedBody();
+        $input = json_decode($data["data"],true);
             $sql = "INSERT INTO users (name, email, password, phone, designation, organisation) VALUES (:name, :email, :password, :phone, :designation, :organisation)";
-        
-
+      
             $sth = $this->db->prepare($sql);
             $sth->bindParam("name", $input['name']);
             $sth->bindParam("email", $input['email']);
@@ -21,6 +21,7 @@
             $sth->bindParam("organisation", $input['organisation']);
             $sth->execute();
             $input['id'] = $this->db->lastInsertId();
+       
       
         return $this->response->withJson($input);
     });

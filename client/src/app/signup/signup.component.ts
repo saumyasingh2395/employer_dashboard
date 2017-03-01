@@ -14,7 +14,14 @@ import { Router } from '@angular/router';
 
 export class SignupComponent implements OnInit {
 
-  user: Users[]=[];
+  user = {
+        name : "skdjhv",
+        email:  "svs",
+        password:  "sbsbs",
+        phone:  0,
+        designation:  "sbsbs",
+        organisation: "sdbsbsbg"
+  };
 
   constructor(private userService: UserService, private router: Router ) {
 
@@ -30,7 +37,6 @@ export class SignupComponent implements OnInit {
   signup(){
     console.log("hi");
    
-
       this.userService.create(this.user).subscribe(
         data => {
             this.router.navigate(['/dashboard']);

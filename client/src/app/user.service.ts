@@ -21,12 +21,17 @@ export class UserService {
 	}
 
   
-	create(body: Users[]): Observable<Users[]>{
+	create(body: Users): Observable<Users[]>{
+    console.log(body);
+    
 		let bodyString = JSON.stringify(body); 
-        let headers      = new Headers({ 'Content-Type': 'application/json' }); 
+        let headers      = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
         let options       = new RequestOptions({ headers: headers }); 
 
-        return this.http.post(this.baseUrl, body, options) 
+        let body2 = 'data=' + encodeURIComponent(bodyString);
+        console.log(bodyString);
+        let url = this.baseUrl+"/signup";
+        return this.http.post(url, body2, options) 
                          .map((res:Response) => res.json()) 
                          .catch((error:any) => Observable.throw(error.json().error || 'Server error')); 
 	}
