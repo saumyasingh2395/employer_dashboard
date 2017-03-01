@@ -2,7 +2,7 @@ export class Users {
         name: string;
         email: string;
         password: string;
-        phone: number;
+        phone: string;
         designation: string;
         organisation: string;
 }

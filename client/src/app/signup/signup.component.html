@@ -1,5 +1,6 @@
+
 <div class="col-md-6 col-md-offset-3">
-    <h2>Register</h2>
+    <h2 >Register</h2>
     <form name="form" (ngSubmit)="signup()" #f="ngForm" novalidate>
         <div class="form-group" >
             <label for="name">Name</label>
@@ -8,31 +9,35 @@
         </div> 
       
        <div class="form-group" >
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <input type="text" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required />
-
         </div>
-       
+
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" required />
-            
         </div>
+
+        <div class="form-group" >
+            <label for="password2">Confirm Password</label>
+            <input type="password" class="form-control" name="password2" />
+        </div>
+
+
 
          <div class="form-group" >
             <label for="phone">Phone</label>
-            <input type="number" class="form-control" name="phone" [(ngModel)]="user.phone" #phone="ngModel" required />
+            <input type="text" class="form-control" name="phone" [(ngModel)]="user.phone" #phone="ngModel" required />
             
         </div>
          <div class="form-group" >
-            <label for="designation">designation</label>
-            <input type="text" class="form-control" name="designation" [(ngModel)]="user.designation" #designation="ngModel" required />
-            
+            <label for="designation">Designation</label>
+            <input type="text" class="form-control" name="designation" [(ngModel)]="user.designation" #designation="ngModel" required />   
         </div>
+
          <div class="form-group">
-            <label for="organisation">organisation</label>
-            <input type="text" class="form-control" name="organisation" [(ngModel)]="user.organisation" #organisation="ngModel" required />
-           
+            <label for="organisation">Organisation</label>
+            <input type="text" class="form-control" name="organisation" [(ngModel)]="user.organisation" #organisation="ngModel" required />  
         </div>
         
         <div class="form-group">

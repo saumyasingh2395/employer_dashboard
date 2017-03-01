@@ -15,28 +15,23 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   user = {
-        name : "skdjhv",
-        email:  "svs",
-        password:  "sbsbs",
-        phone:  0,
-        designation:  "sbsbs",
-        organisation: "sdbsbsbg"
+        name : "",
+        email:  "",
+        password:  "",
+        phone: "",
+        designation:  "",
+        organisation: ""
   };
 
   constructor(private userService: UserService, private router: Router ) {
-
    }
 
   
 
-  ngOnInit() {
-  	
-  	
+  ngOnInit() {  	
   }
 
   signup(){
-    console.log("hi");
-   
       this.userService.create(this.user).subscribe(
         data => {
             this.router.navigate(['/dashboard']);

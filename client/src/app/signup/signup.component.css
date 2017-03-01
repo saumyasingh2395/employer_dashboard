@@ -18,7 +18,10 @@ textarea {
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
 }
+h2{
+  text-align: center;
 
+}
 body {
   background: #f1f2f1;
   margin: 50px 0 0;
