@@ -24,7 +24,7 @@ export class AboutComponent implements OnInit {
   aboutus(){
       this.userService.insertabout(this.about).subscribe(
         data => {
-            this.router.navigate(['/products']);
+            this.router.navigate(['/dashboard/products']);
           },
          error =>{
                 console.log(error);

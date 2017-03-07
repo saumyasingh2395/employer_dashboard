@@ -1,0 +1,89 @@
+<!-- form here -->
+            <form name="form" class="main-form" (ngSubmit)="info()" #f="ngForm" novalidate>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Name</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1" name="name" [(ngModel)]="company.name" #name="ngModel" required>
+                  </div>
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Website</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1" name="website" [(ngModel)]="company.website" #website="ngModel" required>
+                  </div>
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Headquaters</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1" name="headquarters" [(ngModel)]="company.headquarters" #headquarters="ngModel" required>
+                  </div>
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Total Employees</label>
+                  </div>
+                  <div class="form_inputs">
+                    <select class="mdl-textfield__input1" id="sample1" name="total_employees" [(ngModel)]="company.total_employees" #total_employees="ngModel" required>
+                    <option>Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                   </select>
+                  </div>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Company Type</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1" name="company_type" [(ngModel)]="company.company_type" #company_type="ngModel" required>
+                  </div>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Founding Date</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="Date" id="sample1" style="width:200px" name="founding_date" [(ngModel)]="company.founding_date" #founding_date="ngModel" required>
+                  </div>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Industry</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1" name="industry" [(ngModel)]="company.industry" #industry="ngModel" required>
+                  </div>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Cover Photo</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1">
+                  </div>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Logo</label>
+                  </div>
+                  <div class="form_inputs">
+                  <input class="mdl-textfield__input1" type="text" id="sample1">
+                  </div>
+              </div>
+            
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+                   Save
+                </button>
+              
+            </form>
