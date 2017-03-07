@@ -6,13 +6,21 @@ import { AppRoutingModule } from './app-routing';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserService } from './user.service';
+import { AuthGuard } from './auth.guard';
+import { AuthenticationService } from './authentication.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    AboutComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
      AppRoutingModule
   ],
-  providers: [ UserService ],
+  providers: [ UserService , AuthenticationService , AuthGuard],
   bootstrap: [AppComponent]
 })
 

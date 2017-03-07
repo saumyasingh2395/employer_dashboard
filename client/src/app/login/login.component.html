@@ -1,0 +1,24 @@
+<!-- <script>
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+</script>
+ -->
+<div class="login-page">
+  <div class="form">
+  <!--   <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form> -->
+    <form name=form class="login-form" (ngSubmit)="login()" #f="ngForm" novalidate>
+      <input type="email" name="email" placeholder="Email address" [(ngModel)]="model.email"/>
+      <input type="password" name="password" placeholder="Password" [(ngModel)]="model.password" />
+      <button type="submit" >login</button>
+      <p class="message">Not registered? <a href="/signup">Create an account</a></p>
+    </form>
+  </div>
+</div>

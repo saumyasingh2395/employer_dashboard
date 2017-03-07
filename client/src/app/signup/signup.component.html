@@ -1,49 +1,50 @@
-
-<div class="col-md-6 col-md-offset-3">
-    <h2 >Register</h2>
-    <form name="form" (ngSubmit)="signup()" #f="ngForm" novalidate>
-        <div class="form-group" >
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" [(ngModel)]="user.name" #name="ngModel" required />
+<div class="register-page">
+<div class="form">
+  
+    <form class="login-form" name="form" (ngSubmit)="signup()" #f="ngForm" novalidate>
+        <div >
+            <!-- <label for="name">Name</label> -->
+            <input type="text" name="name" placeholder="Name" [(ngModel)]="user.name" #name="ngModel" required />
            
         </div> 
       
-       <div class="form-group" >
-            <label for="email">Email</label>
-            <input type="text" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required />
+       <div>
+          <!--   <label for="email">Email</label> -->
+            <input type="text" name="email" placeholder="Email address" [(ngModel)]="user.email" #email="ngModel" required />
         </div>
 
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" required />
+        <div>
+           <!--  <label for="password">Password</label> -->
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password" #password="ngModel" required />
         </div>
 
-        <div class="form-group" >
-            <label for="password2">Confirm Password</label>
-            <input type="password" class="form-control" name="password2" />
+        <div>
+          <!--   <label for="password2">Confirm Password</label> -->
+            <input type="password" placeholder="Confirm Password" name="password2" />
         </div>
 
 
 
-         <div class="form-group" >
-            <label for="phone">Phone</label>
-            <input type="text" class="form-control" name="phone" [(ngModel)]="user.phone" #phone="ngModel" required />
+         <div>
+          <!--   <label for="phone">Phone</label> -->
+            <input type="text" name="phone" placeholder="Phone Number" [(ngModel)]="user.phone" #phone="ngModel" required />
             
         </div>
-         <div class="form-group" >
-            <label for="designation">Designation</label>
-            <input type="text" class="form-control" name="designation" [(ngModel)]="user.designation" #designation="ngModel" required />   
+         <div>
+            <!-- <label for="designation">Designation</label> -->
+            <input type="text" name="designation" placeholder="Designation" [(ngModel)]="user.designation" #designation="ngModel" required />   
         </div>
 
-         <div class="form-group">
-            <label for="organisation">Organisation</label>
-            <input type="text" class="form-control" name="organisation" [(ngModel)]="user.organisation" #organisation="ngModel" required />  
+         <div>
+            <!-- <label for="organisation">Organisation</label> -->
+            <input type="text" name="organisation" placeholder="Organisation" [(ngModel)]="user.organisation" #organisation="ngModel" required />  
         </div>
         
-        <div class="form-group">
-            <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Register</button>
-            
+        <div>
+            <button type="submit">Register</button>
+             <p class="message">Already registered? <a href="/login">Login Now</a></p>
         </div>
     
     </form>
+</div>
 </div>

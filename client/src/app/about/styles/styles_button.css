@@ -1,0 +1,33 @@
+.mdl-button{
+  width:150px;
+  height:50px;
+  font-size:15px;
+  float:left;
+  text-decoration:none;
+  align-self: center;
+}
+.mdl-button--raised.mdl-button--colored {
+    color:#000000;
+    background:#FFC107;
+    float:left;
+    box-shadow: none;
+    font-weight:bold;
+    }
+.mdl-button--raised.mdl-button--colored:hover {
+  background:#FFC107;
+}
+.mdl-button--raised.mdl-button--colored:active {
+  background:#FFC107;
+}
+.mdl-button.mdl-js-button1:hover{
+  text-decoration: none;
+  background:white;
+}
+.mdl-button.mdl-js-button1:active{
+  text-decoration: none;
+  background:white;
+}
+.mdl-button.mdl-js-button1:visited{
+  text-decoration: none;
+  background:white;
+}
