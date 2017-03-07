@@ -3,9 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 //fetch all users
     $app->get('/', function ($request, $response, $args) {
-         $sth = $this->db->prepare("SELECT * FROM users");
-        $sth->execute();
-        $hello = $sth->fetchAll();
+        $hello = $this->db->fetchAll("SELECT * FROM employers");
         return $this->response->withJson($hello);
     });
 
