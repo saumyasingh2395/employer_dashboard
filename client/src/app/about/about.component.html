@@ -1,3 +1,34 @@
-<p>
-  about works!
-</p>
+
+            <!-- form here -->
+            <form  name="form" (ngSubmit)="aboutus()" #f="ngForm" novalidate>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Vision</label>
+                  </div>
+                  <div class="form_inputs">
+                  <textarea class="mdl-textfield__input1" rows="5" cols="100" id="sample1" name="vision" [(ngModel)]="about.vision" #vision="ngModel" required></textarea> 
+                  </div>
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">Mission</label>
+                  </div>
+                  <div class="form_inputs">
+                  <textarea class="mdl-textfield__input1" rows="5" cols="100" id="sample1" name="mission" [(ngModel)]="about.mission" #mission="ngModel" required></textarea> 
+                  </div>
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <div class="form_labels">
+                  <label class="mdl-textfield__label1" for="sample1">About Us</label>
+                  </div>
+                  <div class="form_inputs">
+                 <textarea class="mdl-textfield__input1" rows="20" cols="100" id="sample1" style="height:100px" name="about_us" [(ngModel)]="about.about_us" #about_us="ngModel" required></textarea> 
+                  </div>
+              </div>
+              
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+                   Save
+                </button>
+            
+            </form>
+

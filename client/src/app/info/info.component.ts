@@ -5,8 +5,7 @@ import { UserService } from '../user.service'
 
 @Component({
   selector: 'info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./styles/styles.css']
+  templateUrl: './info.component.html'
 })
 export class InfoComponent implements OnInit {
 	company = {

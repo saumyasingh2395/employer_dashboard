@@ -1,3 +1,23 @@
-<p>
-  products works!
-</p>
+
+            
+            <!-- form here -->
+            <form  name="form" (ngSubmit)="productsandservices()" #f="ngForm" novalidate>
+                <div class="mdl-textfield mdl-js-textfield">
+                 <label class="mdl-textfield__label1" for="sample1">Title</label>
+                   <input class="mdl-textfield__input" type="text" id="sample1" name="title" [(ngModel)]="products.title" #title="ngModel" required>
+                </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                  <label class="mdl-textfield__label1" for="sample1">Description</label>
+                 <textarea class="mdl-textfield__input2" rows="20" cols="100" id="sample1" style="height:100px" name="description" [(ngModel)]="products.description" #description="ngModel" required></textarea> 
+              </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                 <label class="mdl-textfield__label1" for="sample1">Priority</label>
+                   <input class="mdl-textfield__input2" type="number" id="sample1" width="30%" name="priority" [(ngModel)]="products.priority" #priority="ngModel" required>
+                </div>
+          
+             
+                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+                   Add
+                </button>
+            </form>
+       

@@ -15,12 +15,12 @@
  */
 @font-face{
   font-family:'Montserrat' ;
-  src:url("Fonts/MontserratRegular.ttf");
+  src:url("/src/fonts/MontserratRegular.ttf");
 }
 
 @font-face{
   font-family:'ClearSans' ;
-  src:url("Fonts/clearsans/ClearSans-Regular.ttf");
+  src:url("/src/fonts/clearsans/ClearSans-Regular.ttf");
 }
 
 html, body {

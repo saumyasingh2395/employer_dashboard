@@ -5,8 +5,7 @@ import { UserService } from '../user.service'
 
 @Component({
   selector: 'about',
-  templateUrl: './about.html',
-  styleUrls: ['./styles/styles.css']
+  templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
 	

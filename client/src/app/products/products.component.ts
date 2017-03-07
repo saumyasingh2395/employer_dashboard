@@ -5,8 +5,7 @@ import { UserService } from '../user.service'
 
 @Component({
   selector: 'products',
-  templateUrl: './products.html',
-  styleUrls: ['./styles/styles.css']
+  templateUrl: './products.component.html'
 })
 export class ProductsComponent implements OnInit {
 
