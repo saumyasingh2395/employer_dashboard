@@ -21,20 +21,7 @@ ini_set('display_errors', 1);
   $app->post('/signup', function ($request, $response) {
         $data = $request->getParsedBody();
         $input = json_decode($data["data"],true);
-        //require_once 'passwordHash.php';
-        //$input['password'] = passwordHash::hash($input['password']);
-            $sql = "INSERT INTO users (name, email, password, phone, designation, organisation) VALUES (:name, :email, :password, :phone, :designation, :organisation)";
-      
-            $sth = $this->db->prepare($sql);
-            $sth->bindParam("name", $input['name']);
-            $sth->bindParam("email", $input['email']);
-            $sth->bindParam("password", $input['password']);
-            $sth->bindParam("phone", $input['phone']);
-            $sth->bindParam("designation", $input['designation']);
-            $sth->bindParam("organisation", $input['organisation']);
-            $sth->execute();
-            $input['id'] = $this->db->lastInsertId();
-       
+        
       
         return $this->response->withJson($input);
     });

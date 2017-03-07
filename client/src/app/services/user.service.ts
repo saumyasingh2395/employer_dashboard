@@ -15,7 +15,7 @@ export class UserService {
 
   
 
-  	private baseUrl = 'http://127.0.0.1/employer_dashboard/slimpart/public'; 
+  	private baseUrl = 'http://localhost:8000'; 
 
  	getAll() : Observable<Users[]> {
          return this.http.get(this.baseUrl)

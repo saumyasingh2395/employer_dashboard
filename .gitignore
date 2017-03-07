@@ -1,1 +1,9 @@
 slimpart/src/settings.php
+
+slimpart/vendor
+
+slimpart/vendor/composer/installed.json
+
+slimpart/vendor/composer/autoload_static.php
+
+slimpart/vendor/composer/autoload_psr4.php

@@ -12,7 +12,7 @@ export class AuthenticationService {
         let headers      = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }); 
         let options       = new RequestOptions({ headers: headers }); 
 
-        return this.http.post('http://127.0.0.1/employer_dashboard/slimpart/public/login', 
+        return this.http.post('http://localhost:8000/login', 
             JSON.stringify({ email: email, password: password }), options)
             .map((response: Response) => {
                 let user = response.json();
