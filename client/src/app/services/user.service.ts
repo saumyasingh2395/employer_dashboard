@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response} from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-import { Users } from './users';
-import { Company } from './company';
-import { About } from './about';
-import { Products } from './products';
+import { Users } from '../modules/users';
+import { Company } from '../modules/company';
+import { About } from '../modules/about';
+import { Products } from '../modules/products';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
