@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@font-face{
-  font-family:'Montserrat' ;
+/*@font-face{*/
+/*  font-family:'Montserrat' ;
   src:url("Fonts/MontserratRegular.ttf");
 }
 
@@ -22,7 +22,7 @@
   font-family:'ClearSans' ;
   src:url("Fonts/clearsans/ClearSans-Regular.ttf");
 }
-
+*/
 html, body {
   font-family:"Montserrat";
 }
