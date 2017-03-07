@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions, Response} from '@angular/http';
 import {Observable} from 'rxjs/Rx'
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
 import { Users } from '../users';
 import { Router } from '@angular/router';
 

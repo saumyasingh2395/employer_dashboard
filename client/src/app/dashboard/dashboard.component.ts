@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../company';
 import { Router } from '@angular/router';
-import { UserService } from '../user.service'
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html'
 })
+
 export class DashboardComponent implements OnInit {
 
 	 //  company = {
